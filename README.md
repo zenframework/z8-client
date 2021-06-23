@@ -15,4 +15,4 @@ java -jar z8-client-1.0.jar <url> <action> <request>
     - gen: org.zenframework.z8.server.db.generator.SchemaGenerator
 
 ## Example
-java -jar z8-client.jar http://Admin:pwd@localhost:9080/ job gen
+java -jar z8-client-1.0.jar http://Admin:pwd@localhost:9080/ job gen

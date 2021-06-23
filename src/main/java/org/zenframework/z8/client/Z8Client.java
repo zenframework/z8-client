@@ -47,7 +47,7 @@ public class Z8Client {
 			System.out.println("Known requests:");
 			for (Object key : ALIASES.keySet())
 				System.out.println("\t- " + key + ": " + ALIASES.get(key));
-			System.out.println("Example: java -jar z8-client.jar http://Admin:pwd@localhost:9080/ job gen");
+			System.out.println("Example: java -jar z8-client-1.0.jar http://Admin:pwd@localhost:9080/ job gen");
 			System.exit(1);
 		}
 
