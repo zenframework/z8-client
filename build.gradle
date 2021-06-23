@@ -1,0 +1,45 @@
+plugins {
+	id 'java'
+	id 'eclipse'
+}
+
+//repositories {
+//	mavenLocal()
+//	maven { url 'http://mvn.revoltsoft.ru/' }
+//}
+
+//dependencies {
+//	compile "org.zenframework.z8:org.zenframework.z8.compiler:${z8Version}"
+//}
+
+group = 'org.zenframework.z8'
+version = '1.0'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+buildDir = './target'
+
+sourceSets.main.java.outputDir = file("${buildDir}/classes/main")
+sourceSets.main.output.resourcesDir = file("${buildDir}/classes/main")
+
+eclipse {
+	// Eclipse: default java output -> $buildDir/classes/default
+	classpath.defaultOutputDir = new File(buildDir, 'classes/main')
+	// Eclipse: java source folders output -> ${buildDir}/classes/...
+	classpath.file.whenMerged {
+		entries.findAll { entry ->
+			entry instanceof org.gradle.plugins.ide.eclipse.model.SourceFolder
+		}.each { entry ->
+			entry.output = entry.output.replace('bin/', relativePath("${buildDir}/classes/"))
+		}
+	}
+}
+
+jar {
+	manifest {
+		attributes(
+			'Main-Class': 'org.zenframework.z8.client.Z8Client'
+		)
+	}
+}

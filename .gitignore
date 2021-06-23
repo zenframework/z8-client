@@ -1,0 +1,8 @@
+.externalToolBuilders/
+.gradle/
+.idea/
+.java/
+.settings/
+target/
+.classpath
+.project
