@@ -2,17 +2,17 @@
 
 Simple web-client for Z8 projects automation
 
-Build:
+## Build
 ./gradlew build
 
-Usage:
-java -jar z8-client-1.0.jar <url> <action> <request>");
+## Usage
+java -jar z8-client-1.0.jar <url> <action> <request>
 
-Actions:
+### Actions
     - job: run job
 
-Known requests:
+### Known requests
     - gen: org.zenframework.z8.server.db.generator.SchemaGenerator
 
-Example:
+## Example
 java -jar z8-client.jar http://Admin:pwd@localhost:9080/ job gen
