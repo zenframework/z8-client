@@ -3,15 +3,6 @@ plugins {
 	id 'eclipse'
 }
 
-//repositories {
-//	mavenLocal()
-//	maven { url 'http://mvn.revoltsoft.ru/' }
-//}
-
-//dependencies {
-//	compile "org.zenframework.z8:org.zenframework.z8.compiler:${z8Version}"
-//}
-
 group = 'org.zenframework.z8'
 version = '1.0'
 
